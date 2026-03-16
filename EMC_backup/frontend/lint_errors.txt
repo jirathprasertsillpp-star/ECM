@@ -1,0 +1,95 @@
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/ErrorBoundary.jsx
+  9:35  error  'error' is defined but never used  no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/components/Layout/Header.jsx
+  8:11  error  'location' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/components/Layout/Sidebar.jsx
+  45:47  error  'isActive' is not defined  no-undef
+  47:69  error  'isActive' is not defined  no-undef
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/ClaimDetail.jsx
+  133:44  error  'removeReceiptFromDB' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  139:9   error  Error: Cannot access variable before it is declared
+
+`loadData` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  137 |
+  138 |     useEffect(() => {
+> 139 |         loadData();
+      |         ^^^^^^^^ `loadData` accessed before it is declared
+  140 |     }, [id]);
+  141 |
+  142 |     const loadData = async () => {
+
+  140 |     }, [id]);
+  141 |
+> 142 |     const loadData = async () => {
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 143 |         setLoading(true);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 144 |         const data = await fetchClaimDetails(id);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 145 |         if (data) setClaimData(data);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 146 |         setLoading(false);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 147 |     };
+      | ^^^^^^^ `loadData` is declared here
+  148 |
+  149 |     const handleReceiptUploaded = (itemId, newReceipt) => {
+  150 |         setClaimData(prev => ({  react-hooks/immutability
+  156:40  error  'receiptId' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  173:11  error  'isOwner' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  174:11  error  'isDraft' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/Dashboard.jsx
+  16:8   error  'toast' is defined but never used. Allowed unused vars must match /^[A-Z_]/u               no-unused-vars
+  44:11  error  'isMorning' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/Login.jsx
+  1:27  error  'useRef' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/MyClaims.jsx
+  41:18  error  'err' is defined but never used  no-unused-vars
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/NewClaim.jsx
+   62:22  error  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  263:17  error  Error: Cannot access variable before it is declared
+
+`loadClaim` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  261 |
+  262 |     useEffect(() => {
+> 263 |         if (id) loadClaim();
+      |                 ^^^^^^^^^ `loadClaim` accessed before it is declared
+  264 |     }, [id]);
+  265 |
+  266 |     const loadClaim = async () => {
+
+  264 |     }, [id]);
+  265 |
+> 266 |     const loadClaim = async () => {
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 267 |         const data = await fetchClaimDetails(id);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 268 |         if (data) {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 269 |             setClaim(data.claim);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 270 |             setItems(data.items || []);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 271 |         }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 272 |     };
+      | ^^^^^^^ `loadClaim` is declared here
+  273 |
+  274 |     const steps = [
+  275 |         { num: 1, title: 'ข้อมูลหลัก', icon: FilePlus },  react-hooks/immutability
+
+/Users/jirathprasertsillp/Desktop/EMC/frontend/src/pages/Settings.jsx
+  6:5  error  Parsing error: Identifier 'MessageSquare' has already been declared
+
+✖ 16 problems (16 errors, 0 warnings)
+
